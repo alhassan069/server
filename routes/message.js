@@ -19,7 +19,7 @@ router.post('/send', async(req, res) => {
             if (!err) {
                 res.status(200).json({ message: 'SMS Send Successfully.' });
             } else {
-                res.status(400).json({ message: err.message });
+                res.status(401).json({ message: err.message });
             }
         });
     }).catch((err) => {
